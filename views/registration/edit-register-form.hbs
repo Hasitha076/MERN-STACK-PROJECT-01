@@ -1,0 +1,61 @@
+<div class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Edit Registration Info.</h1>
+</div>
+
+<div class="col py-3">
+  <div class="row">
+    <div class="col">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/register">Registration</a></li>
+          <li class="breadcrumb-item active">Edit Register Student</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+</div>
+
+
+<form action="/register/edit-register" method="POST">
+
+  <div class="row form-group mb-4">
+    <div class="col">
+      <label for="id">ID</label>
+      <input type="text" class="form-control" id="id" name="id" placeholder="ID" required value="{{this.register.id}}">
+    </div>
+
+        <div class="col">
+      <label for="student_name">Student Name</label>
+        <select class="form-control" name="student_name" id="student_name">
+          <option value="{{this.register.student_name}}" selected="selected">{{this.register.student_name}}</option>
+              {{#each students}}
+                <option>{{this.name}}</option>
+              {{/each}}
+          
+      </select>
+    </div>
+  </div>
+
+  <div class="row form-group mb-4">
+
+        <div class="col">
+      <label for="module_name">Module Name</label>
+        <select class="form-control" name="module_name" id="module_name">
+          <option value="{{this.register.module_name}}" selected="selected">{{this.register.module_name}}</option>
+              {{#each programs}}
+                <option>{{this.module_name}}</option>
+              {{/each}}
+          
+      </select>
+    </div>
+
+  </div>
+
+  <div class="form-group mb-4">
+    <button type="submit" class="btn btn-warning">Edit Register Student</button>
+  </div>
+
+  
+
+</form>

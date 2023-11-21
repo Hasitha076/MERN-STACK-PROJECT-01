@@ -1,0 +1,53 @@
+<div class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Edit Module Info.</h1>
+</div>
+
+<div class="col py-3">
+  <div class="row">
+    <div class="col">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/module">Program Management</a></li>
+          <li class="breadcrumb-item active">Edit Module</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+</div>
+
+
+<form action="/module/edit-module" method="POST">
+
+  <div class="row form-group mb-4">
+    <div class="col">
+      <label for="id">Module ID</label>
+      <input type="number" class="form-control" id="id" name="id" placeholder="Module ID" required value="{{this.module.id}}">
+    </div>
+
+    <div class="col">
+      <label for="module_name">Module Name</label>
+      <input type="text" class="form-control" id="module_name" name="module_name" placeholder="Module Name" required value="{{this.module.module_name}}">
+    </div>
+  </div>
+
+  <div class="row form-group mb-4">
+
+    <div class="col">
+      <label for="duration">Duration</label>
+      <input type="number" class="form-control" id="duration" name="duration" placeholder="Duration" required value="{{this.module.duration}}">
+    </div>
+
+    <div class="col">
+      <label for="price">Module Fee</label>
+      <input type="text" class="form-control" id="price" name="price" placeholder="Module Fee" required value="{{this.module.price}}">
+    </div>
+  </div>
+
+  <div class="form-group mb-4">
+    <button type="submit" class="btn btn-primary">Edit Module</button>
+  </div>
+
+  
+
+</form>
